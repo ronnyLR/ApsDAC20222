@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Editar Jogo - Aps DAC</title>
+</h:head>
+<h:body>
+	<h:form id="lobby">
+		<p:panel header="Editar Jogo - Aps DAC">
+			<p:messages id="messages" showDetail="true" closable="true">
+				<p:autoUpdate />
+			</p:messages>
+			<p:panelGrid columns="2">
+			
+				<p:outputLabel value="Valor 1" for="valor1"/>
+				<p:inputText value="#{jogoBean.jogo.v1}" id="valor1"/>
+				
+				<p:outputLabel value="Valor 2" for="valor2"/>
+				<p:inputText value="#{jogoBean.jogo.v2}" id="valor2"/>
+				
+				<p:outputLabel value="Valor 3" for="valor3"/>
+				<p:inputText value="#{jogoBean.jogo.v3}" id="valor3"/>
+				
+				<p:outputLabel value="Valor 4" for="valor4"/>
+				<p:inputText value="#{jogoBean.jogo.v4}" id="valor4"/>
+				
+				<p:outputLabel value="Valor 5" for="valor5"/>
+				<p:inputText value="#{jogoBean.jogo.v5}" id="valor5"/>
+				
+				<p:commandButton value="Salvar alterações" action="#{jogoBean.editar}" update="lobby"/>
+				<p:commandButton value="Listar" action="listagem"/>
+			</p:panelGrid>
+		</p:panel>
+	</h:form>
+</h:body>
+</html>
